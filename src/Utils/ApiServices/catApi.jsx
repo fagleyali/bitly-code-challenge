@@ -1,11 +1,13 @@
 import Axios from 'axios'
 
-const getCats = () => {
-    const catList = Axios.get('https://api.thecatapi.com/v1/breeds')
-                            .then(res=>res.data)
-                            .catch(err=>console.log(err))
-                            .then(final=>console.log(final))
-    return catList
+let catList = [];
+const getCats = async (cb) => {
+    catList = await Axios.get('https://api.thecatapi.com/v1/breeds')
+                            .then(res => res.data)
+
+    if(cb instanceof Function){
+        return cb(catList)
+    }                      
                     
 }
 
