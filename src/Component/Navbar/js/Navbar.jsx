@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import '../css/navbar.css'
 
 const Navbar = () => {
@@ -10,10 +11,10 @@ const Navbar = () => {
         <div >
             <ul className='breadcrumb'>
                 <li>
-                    <a href='#'>List Page</a>
+                    <Link to="/">List Page</Link>
                 </li>
                 <li>
-                    <a href='#'>Detail Page</a>
+                    <Link to="/cat-detail">Detail Page</Link>
                 </li>
             </ul>
         </div>
