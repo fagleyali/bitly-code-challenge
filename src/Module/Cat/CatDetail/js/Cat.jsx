@@ -18,7 +18,7 @@ const Cat = (props) => {
 
         </span>
         <span className='middle-bar'>
-          <img src={cat.image.url} style={{...imgStyle({width:800,height:600})}} />
+          <img src={cat.image.url} style={{...imgStyle({width:800,height:600})}} alt='cat-detail' />
         </span>
         <span className='right-side-bar'>
 
