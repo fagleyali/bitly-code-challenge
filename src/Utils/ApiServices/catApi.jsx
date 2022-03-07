@@ -1,7 +1,7 @@
 import Axios from 'axios'
 
 
-Axios.defaults.headers.common['x-api-key'] = process.env.api_key
+Axios.defaults.headers.common['x-api-key'] = '3bc465c8-e539-48fe-bd59-daf673cdb4b7'
 
 let catList = [];
 export const getCats = async (cb, cbe) => {
