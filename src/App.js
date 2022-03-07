@@ -17,6 +17,7 @@ function App() {
   const handleError = (err) => {
     if(!err) return null
     setError(err)
+    console.log(err)
   }
   return (
     <Router>
@@ -26,6 +27,7 @@ function App() {
           <Routes>
             <Route path='/' element={<Cats getCat={getSelectedCat} getError={handleError} />} />
             <Route path='/cat-detail' element={<Cat cat={selectedCat} getError={handleError} />} />
+            <Route path='/error' element={<Error />} />
           </Routes>
         }
       </div>

@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import {getCats} from '../../../../Utils/ApiServices/catApi'
+import Error from '../../../../Component/Error/js/Error'
 import { useNavigate } from 'react-router-dom'
 
 import '../css/cats.css'
@@ -23,6 +24,7 @@ const Cats = (props) => {
       } catch (error) {
         setError(error)
         getError(true)
+        navigate('/error')
       }
     }
 

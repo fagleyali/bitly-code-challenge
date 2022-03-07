@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import { getCat } from '../../../../Utils/ApiServices/catApi'
-import { useLocation } from 'react-router-dom'
-import ReactStars from 'react-rating-stars-component'
 import Rating from '../../../../Component/Raing/js/Rating'
 import {RATING_ARRAY} from '../../../../Utils/Constants/constants'
 import '../css/cat.css'
@@ -17,7 +15,6 @@ const imgStyle = (obj) => {
 const Cat = (props) => {
   const [cat, setCatDetail] = useState({})
   const [error, setError] = useState('')
-  const location = useLocation()
   useEffect(() => {
     const {cat} = props;
     const searchStr = window.location.search
@@ -59,11 +56,6 @@ const Cat = (props) => {
     return catObj;
   }
 
-  const ratingChanged = (newRating) => {
-    console.log(newRating);
-  };
-
-  
   return (
     <div>
       <h3>{cat.name}</h3><span> <h5> originated from {cat.origin} </h5> </span>
@@ -72,7 +64,7 @@ const Cat = (props) => {
           <img src={cat && cat.image && cat.image.url} style={{...imgStyle({width:800,height:600})}} alt='cat-detail' />
         </span>
       </div>
-      <div class='cat-description'>
+      <div className='cat-description'>
         {cat.description}
       </div>
       <div className='cat-temperament'>
