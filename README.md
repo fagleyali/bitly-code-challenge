@@ -2,7 +2,7 @@
 
 This project is for Bitly coding challenges. It was bootstrapped with Create React App. 
 
-# Api integration
+## Api integration
 
 https://docs.thecatapi.com/ was integrated as api. The following 2 apis were consumed.
 
