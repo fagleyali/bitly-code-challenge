@@ -11,11 +11,9 @@ const Navbar = () => {
         <div >
             <ul className='breadcrumb'>
                 <li>
-                    <Link to="/">List Page</Link>
+                    <Link to="/">Home Page</Link>
                 </li>
-                <li>
-                    <Link to="/cat-detail">Detail Page</Link>
-                </li>
+                
             </ul>
         </div>
     </div>
